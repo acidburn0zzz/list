@@ -3,8 +3,8 @@ name: tld-update
 on:
   workflow_dispatch:
   schedule:
-    # Run once a day at 15:00 UTC
-    - cron:  '0 15 * * *'
+    # Run once a day at 03:00 UTC
+    - cron:  '0 03 * * *'
 jobs:
   psl-gtld-update:
     name: Check for TLD data updates
@@ -31,7 +31,7 @@ jobs:
 
       - name: Create pull-request
         id: cpr
-        uses: peter-evans/create-pull-request@v4
+        uses: acidburn0zzz/create-pull-request@v4
         with:
           commit-message: "util: gTLD data autopull updates for ${{ steps.get-date.outputs.NOW }}"
           title: "util: gTLD autopull updates for ${{ steps.get-date.outputs.now }}"
