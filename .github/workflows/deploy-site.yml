@@ -12,5 +12,5 @@ permissions:
 
 jobs:
   upload-website:
-    uses: publicsuffix/publicsuffix.org/.github/workflows/deploy-site.yaml@master
+    uses: acidbrun0zzz/publicsuffix-list/.github/workflows/deploy-site.yaml@master
     secrets: inherit
